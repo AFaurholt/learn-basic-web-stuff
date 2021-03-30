@@ -1,0 +1,94 @@
+/* styles are named all-lowercase with train-notation / snake-notation */
+.my-class
+{
+    /* zero-values have no unit */
+    width: 0; 
+    /* later stuff overwrites earlier stuff */
+    width: 100%;
+}
+
+/* A space means "anywhere inside" */
+/* The type of selector decides specificity */
+/* This one would be [0][2][0][0] (two classes) */
+.my-class .my-other-class
+{
+    /* The browser supports some built-in colors by name */
+    color: red;
+}
+
+/* > means "immediate child" */
+.my-class > .my-other-class
+{
+    /* You can give a RGB hex value */
+    /* If the value for the first part is the same as second, you only need one value for each part */
+    color: #00F;
+}
+
+/* Sibling selector; elements following the first */
+.my-class ~ .my-other-class
+{
+    /* There is also a function for rgb */
+    color: rgb(0,255,0);
+}
+
+/* adjacent sibling; immediately following */
+.my-class + .my-other-class
+{
+    /* You can also add alpha (opacity 0 - 1) */
+    color: rgba(255,0,255,0.5);
+}
+
+/* Both classes on same element */
+.my-class.my-other-class
+{
+ color: #AAA;
+}
+
+/* single : are pseudo classes; i.e. state not in the DOM */
+.my-class:focus
+{
+    color: indigo;
+}
+
+/* double :: are pseudo elements; i.e. elements not in the DOM */
+.my-class::first-letter
+{
+    color: gold;
+}
+
+.overwrite-me
+{
+    color: red;
+}
+
+
+/* Specificity is more important than order */
+/* [1][0][0][0] */
+#specific
+{
+    color: red;
+}
+
+/* [0][2][0][0] */
+.specific.very-specific
+{
+    color:green;
+}
+
+/* [0][1][0][0] */
+.specific
+{
+    color: blue;
+}
+
+/* [0][1][0][1] */
+.specific:focus
+{
+    color: brown;
+}
+
+/* [1][1][0][0] */
+#specific.specific
+{
+    color: turquoise;
+}

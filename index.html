@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- I'm important for how text is rendered -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- I make the site responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>I'm important because of SEO</title>
+
+    <!-- I'm evaluated relative to the HTML-file, but it can depend on how the server serves requests -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- later stylesheets overwrite earlier ones -->
+    <link rel="stylesheet" href="styles/main-overwrite.css">
+</head>
+
+<body>
+    <div class="my-class">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus iste quaerat, et
+        dignissimos illo officia, tenetur cupiditate veniam harum similique culpa eum vero? Accusamus tenetur impedit
+        at, dolorum nam magnam.</div>
+    <div class="my-class my-other-class">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias facere modi
+        quas. Fugiat modi ad, voluptatem eius quam animi voluptate culpa ipsa, repellat cum natus consequatur, quis
+        consequuntur nostrum asperiores?</div>
+    <div class="my-class">
+        <div class="my-other-class">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, aliquid a aut
+            autem quia magni cupiditate non voluptate dicta tempora, exercitationem rem enim deserunt natus voluptas,
+            eaque cum quas pariatur.</div>
+        <div>
+            <div class="my-other-class">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae dolore
+                doloribus maxime modi. Quisquam inventore atque iusto, perspiciatis eaque, hic ratione eum natus
+                necessitatibus nulla voluptas nisi quasi excepturi esse?</div>
+        </div>
+    </div>
+    <div class="my-other-class">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim provident cumque incidunt
+        saepe, possimus hic quo quaerat. Repudiandae maxime non autem ipsa? Veniam est totam aspernatur maxime iure
+        culpa provident.</div>
+    <div class="my-other-class">Optio molestiae itaque sapiente, velit quo facilis est voluptates dolores dolor
+        consequatur beatae tempora explicabo quam nihil. Amet, veritatis assumenda quasi magnam quisquam ipsa!
+        Praesentium soluta in officia omnis consequatur!</div>
+    <button class="my-class">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique blanditiis a suscipit
+        natus aliquam neque porro ratione, deserunt quo laborum illo quisquam quod ipsum accusamus rerum labore magnam
+        cum molestias!</button>
+    <div class="overwrite-me">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem doloribus amet quia
+        harum quaerat est, ipsum architecto, placeat unde deserunt ad at, ab veniam molestias necessitatibus corrupti
+        sit temporibus inventore?</div>
+    <br>
+
+    <div id="specific">
+        #specific
+    </div>
+    <br>
+
+    <div id="specific" class="specific">
+        #specific.specific
+    </div>
+    <br>
+
+    <div class="specific very-sepcific">
+        .specific.very-specific
+    </div>
+    <br>
+
+    <div id="specific" class="specific very-specific">#specific.specific.very-specific</div>
+    <br>
+    <button id="specific" class="specific">
+        #specific.specific
+    </button>
+    <br>
+    <button class="specific">
+        .specific
+    </button>
+
+</body>
+
+</html>
