@@ -51,6 +51,7 @@
 }
 
 /* double :: are pseudo elements; i.e. elements not in the DOM */
+/* [0][1][0][1] */
 .my-class::first-letter
 {
     color: gold;
@@ -61,8 +62,13 @@
     color: red;
 }
 
-
 /* Specificity is more important than order */
+/* [1][1][0][0] */
+#specific.specific
+{
+    color: turquoise;
+}
+
 /* [1][0][0][0] */
 #specific
 {
@@ -87,8 +93,9 @@
     color: brown;
 }
 
-/* [1][1][0][0] */
-#specific.specific
+/* [1][0][0][1] */
+#specific:focus
 {
-    color: turquoise;
+    color: indigo;
 }
+
